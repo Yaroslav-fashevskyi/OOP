@@ -5,8 +5,8 @@ public class Main {
         Phone phone = new Phone();
 
         phone.brand = "Apple";
-        phone.model = "iPhone 14";
-        phone.price = 999.99;
+        phone.model = "iPhone 56";
+        phone.price = 6789.12;
 
         phone.Info();
     }
