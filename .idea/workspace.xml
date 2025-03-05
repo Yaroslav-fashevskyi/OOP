@@ -4,40 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98c33a-495e-454e-a10c-be1a295f7597" name="Changes" comment="" />
+    <list default="true" id="9eefdf6a-f734-46ad-8a4b-dae0fb9e4b51" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/p1/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p2/Fraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP/src/p1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP/src/p1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP/src/p2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP/src/p2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP/src/p3/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p3/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2tuKGP0CqlGnnex97r7ajrbAAeD" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2tuNOJyTlTSUnOBzIX07t37HSKD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "p1",
+    "git-widget-placeholder": "p3",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yaros\OneDrive\Документи\GitHub\OOP\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -49,13 +71,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9b98c33a-495e-454e-a10c-be1a295f7597" name="Changes" comment="" />
-      <created>1741196426225</created>
+      <changelist id="9eefdf6a-f734-46ad-8a4b-dae0fb9e4b51" name="Changes" comment="" />
+      <created>1741197971202</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1741196426225</updated>
-      <workItem from="1741196427946" duration="64000" />
-      <workItem from="1741196505101" duration="712000" />
+      <updated>1741197971202</updated>
+      <workItem from="1741197973706" duration="2317000" />
     </task>
     <servers />
   </component>
