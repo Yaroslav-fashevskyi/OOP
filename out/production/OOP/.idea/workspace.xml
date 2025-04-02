@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eefdf6a-f734-46ad-8a4b-dae0fb9e4b51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/p1/Phone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p3/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +37,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "p2",
+    "git-widget-placeholder": "p8-Java",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -66,7 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1741197971202</updated>
       <workItem from="1741197973706" duration="2682000" />
-      <workItem from="1741244464143" duration="597000" />
+      <workItem from="1741244464143" duration="1644000" />
+      <workItem from="1743618388432" duration="928000" />
     </task>
     <servers />
   </component>
