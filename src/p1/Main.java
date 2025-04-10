@@ -1,126 +1,180 @@
+// Інтерфейс, який успадковуватимуть усі ті дочірні класи
+interface IVehicleControl {
+    void start();
+    void stop();
+}
+
+// Інтерфейс для класів, що мають двигун
+interface IEngineControl {
+    void startEngine();
+    void refuel(double fuelAmount);
+    void displayMaxRoute();
+}
+
+// Базовий клас транспорту
+abstract class Vehicle implements IVehicleControl {
+    protected String brand;
+    protected String model;
+    protected int maxSpeed;
+    protected int capacity;
+    protected int currentSpeed;
+
+    public Vehicle(String brand, String model, int maxSpeed, int capacity) {
+        this.brand = brand;
+        this.model = model;
+        this.maxSpeed = maxSpeed;
+        this.capacity = capacity;
+        this.currentSpeed = 0;
+    }
+
+    public void displayInfo() {
+        System.out.println("Бренд: " + brand + ", Модель: " + model + ", Максимальна швидкість: " + maxSpeed + " км/год");
+    }
+
+    public void displayCurrentSpeed() {
+        System.out.println("Поточна швидкість: " + currentSpeed + " км/год");
+    }
+
+    public void displayCapacity() {
+        System.out.println("Місткість: " + capacity + " міс.");
+    }
+}
+
+class Car extends Vehicle implements IEngineControl {
+    private double fuelLevel;
+
+    public Car(String brand, String model, int maxSpeed, int capacity, double fuelLevel) {
+        super(brand, model, maxSpeed, capacity);
+        this.fuelLevel = fuelLevel;
+    }
+
+    // Реалізація методу старт
+    @Override
+    public void start() {
+        startEngine();
+        System.out.println("Автомобіль запущений.");
+        currentSpeed = 10;
+    }
+
+    // Реалізація методу стоп
+    @Override
+    public void stop() {
+        System.out.println("Автомобіль зупинено.");
+        currentSpeed = 0;
+    }
+
+    // Реалізація методу для запуску двигуна
+    @Override
+    public void startEngine() {
+        System.out.println("Двигун автомобіля запущено.");
+    }
+
+    // Метод для заправки
+    @Override
+    public void refuel(double fuelAmount) {
+        fuelLevel += fuelAmount;
+        System.out.println("Автомобіль заправлено. Поточний рівень палива: " + fuelLevel);
+    }
+
+    // Відображення максимальної довжини маршруту 1 згначення палива дає 15 км
+    @Override
+    public void displayMaxRoute() {
+        double maxRoute = fuelLevel * 15;
+        System.out.println("Максимальна довжина маршруту: " + maxRoute + " км");
+    }
+}
+
+// Клас Motorcycle
+class Motorcycle extends Vehicle implements IEngineControl {
+    private double fuelLevel;
+
+    public Motorcycle(String brand, String model, int maxSpeed, int capacity, double fuelLevel) {
+        super(brand, model, maxSpeed, capacity);
+        this.fuelLevel = fuelLevel;
+    }
+
+    @Override
+    public void start() {
+        startEngine();
+        System.out.println("Мотоцикл запущено.");
+        currentSpeed = 15;
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Мотоцикл зупинено.");
+        currentSpeed = 0;
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Двигун мотоцикла запущено.");
+    }
+
+    @Override
+    public void refuel(double fuelAmount) {
+        fuelLevel += fuelAmount;
+        System.out.println("Мотоцикл заправлено. Поточний рівень палива: " + fuelLevel);
+    }
+
+    // Відображення максимальної довжини маршруту 1 згначення палива дає 25 км
+    @Override
+    public void displayMaxRoute() {
+        double maxRoute = fuelLevel * 25;
+        System.out.println("Максимальна довжина маршруту: " + maxRoute + " км");
+    }
+}
+
+// Клас Bicycle
+class Bicycle extends Vehicle {
+    public Bicycle(String brand, String model, int maxSpeed, int capacity) {
+        super(brand, model, maxSpeed, capacity);
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Розпочато поїздку на велосипеді.");
+        currentSpeed = 5;
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Велосипед зупинено.");
+        currentSpeed = 0;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
-        // Створення об’єктів для кожного персонажа
-        Character warrior = new Warrior("Воїн", 100);
-        Character priest = new Priest("Жрець", 80);
-        Character thief = new Thief("Грабіжник", 70);
-        Character mage = new Mage("Маг", 60);
+        // обєкт
+        Car car = new Car("Tesla", "X", 262, 95, 10);
+        Motorcycle moto = new Motorcycle("Motorcycle", "1", 300, 10, 5);
+        Bicycle bike = new Bicycle("A", "1", 320, 1);
 
-        // Виклик перевантажених методів атаки
-        System.out.println("=== Атаки ===");
-        warrior.attack();
-        warrior.attack("меч");
+        // обєкт в масив
+        Vehicle[] vehicles = { car, moto, bike };
 
-        priest.attack();
-        priest.attack("пішли за капличку");
+        // Метод для демонстрації роботи всіх методів кожного обєкта
+        for (Vehicle v : vehicles) {
+            System.out.println("=================================");
+            v.displayInfo();
+            v.displayCurrentSpeed();
+            v.displayCapacity();
+            v.start();
+            v.displayCurrentSpeed();
 
-        thief.attack();
-        thief.attack("ніж");
+            // Якщо транспорт має двигун буде IEngineControl
+            if (v instanceof IEngineControl) {
+                IEngineControl engineVehicle = (IEngineControl) v;
+                engineVehicle.displayMaxRoute();
+                // Наприклад, заправляємо транспорт на 5 одиниць палива
+                engineVehicle.refuel(5);
+                engineVehicle.displayMaxRoute();
+            }
 
-        mage.attack();
-        mage.attack("супер-палиця");
-
-        // Виклик перевантажених методів захисту
-        System.out.println("\n=== Захист ===");
-        warrior.defend();
-        warrior.defend("щит");
-
-        priest.defend();
-        priest.defend("молитва");
-
-        thief.defend();
-        thief.defend("тінь");
-
-        mage.defend();
-        mage.defend("магічний бар'єр");
-
-        // Виклик спеціальних атак
-        System.out.println("\n=== Спеціальні атаки ===");
-        warrior.specialAttack();
-        priest.specialAttack();
-        thief.specialAttack();
-        mage.specialAttack();
-    }
-}
-
-// Базовий клас Character
-class Character {
-    protected String name;
-    protected int health;
-
-    public Character(String name, int health) {
-        this.name = name;
-        this.health = health;
-    }
-
-    // Перевантаження методу атаки
-    public void attack() {
-        System.out.println(name + " атакує звичайною атакою!");
-    }
-
-    public void attack(String weapon) {
-        System.out.println(name + " атакує з використанням зброї: " + weapon);
-    }
-
-    // Перевантаження методу захисту
-    public void defend() {
-        System.out.println(name + " захищається звичайним способом!");
-    }
-
-    public void defend(String shield) {
-        System.out.println(name + " захищається за допомогою " + shield + "!");
-    }
-
-    // Метод спеціальної атаки, який перевизначається у дочірніх класах
-    public void specialAttack() {
-        System.out.println(name + " виконує спеціальну атаку!");
-    }
-}
-
-// Дочірній клас Warrior (воїн)
-class Warrior extends Character {
-    public Warrior(String name, int health) {
-        super(name, health);
-    }
-
-    @Override
-    public void specialAttack() {
-        System.out.println(name + " виконує потужний удар мечем!");
-    }
-}
-
-// Дочірній клас Priest (жрець)
-class Priest extends Character {
-    public Priest(String name, int health) {
-        super(name, health);
-    }
-
-    @Override
-    public void specialAttack() {
-        System.out.println(name + " використовує священну силу для зцілення супротивника!");
-    }
-}
-
-// Дочірній клас Thief (грабіжник)
-class Thief extends Character {
-    public Thief(String name, int health) {
-        super(name, health);
-    }
-
-    @Override
-    public void specialAttack() {
-        System.out.println(name + " виконує стрімкий удар зі спини!");
-    }
-}
-
-
-class Mage extends Character {
-    public Mage(String name, int health) {
-        super(name, health);
-    }
-
-    @Override
-    public void specialAttack() {
-        System.out.println(name + " виконує могутню магічну атаку!");
+            v.stop();
+            v.displayCurrentSpeed();
+            System.out.println("=================================\n");
+        }
     }
 }
