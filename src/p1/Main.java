@@ -113,7 +113,7 @@ class Thief extends Character {
     }
 }
 
-// Додатковий персонаж: Mage (маг)
+
 class Mage extends Character {
     public Mage(String name, int health) {
         super(name, health);
