@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eefdf6a-f734-46ad-8a4b-dae0fb9e4b51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/p1/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p1/Library.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/cafe/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cafe/PaymentStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cafe/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
     "Application.Library.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "p12-Java",
+    "git-widget-placeholder": "p13-Java",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,6 +76,7 @@
       <workItem from="1744266792636" duration="495000" />
       <workItem from="1744276507961" duration="954000" />
       <workItem from="1744613844574" duration="560000" />
+      <workItem from="1744883459634" duration="296000" />
     </task>
     <servers />
   </component>
